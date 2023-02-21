@@ -21,7 +21,7 @@ body {
   height: 100vh;
   align-items: center;
 }
-
+/* Text next to logo */
 .odin {
   display: flex;
   background: rgba(0, 0, 0, 0.5);
@@ -31,6 +31,45 @@ body {
   align-items: center;
   justify-content: center;
 }
+/* Logo */
 .odin_img {
   height: 100px;
+}
+
+/* Rigth side */
+
+.right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font: 1rem sans-serif;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+form {
+  margin: 10px 25px;
+}
+
+.title {
+  margin: 25px 35px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 200px 200px;
+}
+
+.ind-input {
+  margin: 10px;
+}
+
+button {
+  margin-left: 10px;
 }
