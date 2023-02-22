@@ -53,7 +53,7 @@ span {
 h1 {
   font: 1rem sans-serif;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-right: 50px;
 }
 
@@ -96,7 +96,9 @@ label {
 
 input:focus {
   box-shadow: 2px 2px 2px gray;
-  border: blue solid 2px;
+  border: blue solid 1px;
+  border-radius: 2px;
+  outline: none;
 }
 
 .ind-input {
@@ -110,4 +112,26 @@ button {
   border-radius: 5px;
   background-color: #596d48;
   color: white;
+}
+
+.log-in {
+  margin-left: 35px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #596d48;
+  font-weight: bold;
+}
+
+.error {
+  border: red 1px solid;
+  border-radius: 2px;
+}
+
+.err_msg {
+  font: 10px sans-serif;
+  color: red;
 }
