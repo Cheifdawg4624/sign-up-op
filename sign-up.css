@@ -131,7 +131,11 @@ a {
   border-radius: 2px;
 }
 
-.err_msg {
+#err_msg {
   font: 10px sans-serif;
   color: red;
+}
+
+.hidden {
+  display: none;
 }

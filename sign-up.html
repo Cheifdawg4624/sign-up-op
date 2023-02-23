@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="sign-up.css" />
-    <script></script>
+    <script>
+      function matchPassword() {
+        let pwd = document.getElementById("pwd").value;
+        let pwdConfirm = document.getElementById("confirm_pwd").value;
+        if (pwd === pwdConfirm) {
+          document.getElementById("pwd").classList.remove("error");
+          document.getElementById("confirm_pwd").classList.remove("error");
+          document.getElementById("err_msg").classList.add("hidden");
+        } else {
+          document.getElementById("err_msg").classList.remove("hidden");
+          document.getElementById("pwd").classList.add("error");
+          document.getElementById("confirm_pwd").classList.add("error");
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="left">
@@ -61,8 +75,9 @@
                 name="pwd"
                 id="pwd"
                 class="error"
+                onkeyup="matchPassword();"
               />
-              <p class="err_msg">* Passwords do not match</p>
+              <p id="err_msg">* Passwords do not match</p>
             </div>
             <div class="ind-input">
               <label for="confirm_pwd">CONFIRM PASSWORD</label><br /><input
@@ -70,11 +85,12 @@
                 name="confirm_pwd"
                 id="confirm_pwd"
                 class="error"
+                onkeyup="matchPassword();"
               />
             </div>
           </div>
         </div>
-        <button type="submit">Create Account</button>
+        <button type="submit" onclick="matchPassword">Create Account</button>
       </form>
       <div class="log-in">
         <p>Already have an account? <a href="">Log in</a></p>
